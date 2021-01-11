@@ -1,211 +1,169 @@
 @import "button";
 @import "text";
 @import "media-icon";
+@import "colors";
 
 
 body {
     margin: 0;
-    // font-family: sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 header {
     background-image: url(/images/header-back.jpg);
     background-size: cover;
-    // background-position: center;
     background-repeat: no-repeat;
-    background-color: $font-dark;
+    background-color: $dark1;
     height: 200px;
-    // width: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // position: relative;
+
+    @media screen  and ( min-width:1024px ) {
+        height: 400px;
+        align-items: start;
+    }
 }
 
 h1 {
     margin: 0;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
-    color: $font-dark;
+    color: $dark1;
     background: rgba($color: #ffffff, $alpha: 0.5);
     border-radius: 5px;
 
     @media screen and (min-width: 769px) {
         font-size: 3em;
     }
-}
-
-main {
-    background-color: $font-dark;
-    // box-sizing: border-box;
-    width: 100%;
-    // height: fit-content;
-    font-family: sans-serif;
-    padding: 10px;
-    box-sizing: border-box;
-
+    @media screen  and ( min-width:1024px ) {
+        margin-left: 50px;
+    }
 }
 
 menu {
     margin: 0;
     padding: 10px;
-    background-color: rgb(50, 50, 50);
+    background-color: $dark2;
     box-shadow: 0 1px 10px rgb(138, 138, 138);
     box-sizing: border-box;
     width: 100%;
-    // height: 20%;
     position: sticky;
     top: 0;
-    // display: flex;
-    // justify-content: space-around;
-
-}
-
-menu {
-    span {
-        color: rgb(245, 245, 245);
-        font: bold 1em sans-serif;
-        margin: 5%;
-        display: none;
-
-        @media screen and (min-width: 481px) and (max-width: 1024px) {
-            font-size: 1.2em;
-        }
-
-    }
-        
 }
 
 .title {
     margin-bottom: 5px;
     text-align: right;
+
+    span {
+        color: $light;
+        font-weight: bold;
+        font-size: 1em;
+        margin: 5%;
+        display: none;
+
+        @media screen and (min-width: 426px) {
+            font-size: 1.2em;
+        }
+        @media screen and (min-width: 769px) {
+            font-size: 1.5em;
+        }
+    }
+
 }
+
 
 .links {
     display: flex;
     justify-content: space-around;
-}
 
-.menu-btn {
-
-    
-
-    @include button;
-    background: none; 
-    color: rgb(245, 245, 245);
-
-    @media screen and (max-width: 425px) {
+    button {
+        @include button;
+        background: none; 
+        color: $light;
         font-size: .7em;
-    }
 
-    @media screen and (min-width: 1024px) {
-        font-size: 1em;
+        @media screen and (min-width: 768px) {
+            font-size: .9em;
+            font-weight: 700;
+        }
     }
 }
 
-// main {
-
-// }
+main {
+    background-color: $dark1;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
 
 section {
-
-    // height: fit-content;
-    // clear: both;
-    img {
-        border-radius: 5px;
-    }
-
-    @media screen and (max-width: 480px) {
-        img {
-            width: 100%;
-            margin: 10px 0;
-            
-        }
-    }
-    
-    @media screen and (min-width: 481px){
-        .img-left {
-            width: 35%;
-            float: left;
-            margin: 10px;
-            // clear: both;
-        }
-        .img-right {
-            width: 35%;
-            float: right;
-            margin: 10px;
-            // clear: both;
-        }
-    }
-
-    // @media screen and (min-width: 1025px) {
-    //     img {
-    //         width: 100%;
-    //         margin: 10px 0;
-    //     }
-    // }
-}
-
-h2 {
     @include section-txt;
+    color: $light;
 
-    padding-top: 20px;
-
-    @media screen and (max-width: 425px) {
+    h2 {
         font-size: 1.3em;
+        
+        @media screen and (min-width: 768px) {
+            font-size: 2em;
+        }
     }
 
-    @media screen and (min-width: 769px) and (max-width: 1024px) {
-        font-size: 2em;
-    }
-}
-
-section {
     p {
-        // clear: both;
-        @include section-txt;
         text-align: justify;
+        font-size: .8em;
     
-        @media screen and (max-width: 768px) {
+        @media screen and (min-width: 1024px) {
             font-size: .9em;
         }
-    
-        @media screen and (min-width: 769px) and (max-width: 1024px) {
-            // font-size: 1em;
-        }
     }
 }
 
+img {
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px 0;    
+}
+
+@media screen and (min-width: 480px) {
+            
+    .img-left {
+        float: left;
+        width: 35%;
+        margin: 10px;
+        
+    }
+    .img-right {
+        float: right;
+        width: 35%;
+        margin: 10px;
+        
+    }
+}
 
 footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: rgb(50, 50, 50);
-    font-family: sans-serif;
-    color: rgb(245, 245, 245);
+    background: $dark2;
+    color: $light;
     padding: 20px;
-    // clear: both;
-    p {
-        
-    }
 }
 
 footer > p {
     font-weight: bold;
     margin: 0;
-
 }
 
 .media {
     text-align: center;
-    // padding: 5px;
+    width: 90%;
 
     p {
         text-align: center;
         margin: 0;
-        // padding: 0;
     }
 
     i {
@@ -213,36 +171,16 @@ footer > p {
         margin: 0 5px;
     }
 
-    @media screen and (max-width: 480px) {
-        // align-items: center;
-        width: 90%;
-    }
 
-    @media screen and (min-width: 481px) and (max-width: 1024px) {
+    @media screen and (min-width: 480px) {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 50%;
 
-        // p {
-        //     margin-bottom: 5px;
-        // }
+        i {
+            font-size: 1.5em;
+        }
     }
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-    // width: 80%;
-
-    
 }
 
-@media screen and (max-width: 480px) {
-
-}
-
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-
-}

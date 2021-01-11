@@ -1,11 +1,6 @@
-$font-light: rgb(245, 245, 245);
-$font-dark: rgb(70, 70, 70);
-
 @mixin section-txt {
     margin: 0;
-    // padding: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
-    color: $font-light;
 }
