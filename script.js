@@ -1,21 +1,12 @@
-const menu = document.querySelector('.menu-title');
-
-
+const menuTitle = document.querySelector('.title');
 
 window.addEventListener('scroll', e => {
     console.log(e.srcElement.scrollingElement.scrollTop)
 
     if (e.srcElement.scrollingElement.scrollTop > 200) {
-        // menu.classList.add('menu-sticky')
-        menu.style.display = 'inline';
-        // menu.style.top = '0';
+        menuTitle.style.display = 'block';
     } else {
-        menu.style.display = 'none';
+        menuTitle.style.display = 'none';
     }
-    
-})
-
-menu.addEventListener('click', e => {
-    // console.log(menu.offsetTop)
     
 })

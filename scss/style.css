@@ -105,22 +105,26 @@ header {
 }
 
 h1 {
+  font-family: 'Righteous', cursive;
+  text-shadow: 2px 2px #ff6d53;
   margin: 0;
   padding: 10px;
   text-align: center;
   color: #464646;
   background: rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   h1 {
-    font-size: 3em;
+    font-size: 2.75em;
   }
 }
 
 @media screen and (min-width: 1024px) {
   h1 {
+    font-size: 3em;
     margin-left: 50px;
   }
 }
@@ -139,17 +143,31 @@ menu {
   top: 0;
 }
 
+@media screen and (min-width: 1024px) {
+  menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .title {
   margin-bottom: 5px;
   text-align: right;
+  font-family: 'Righteous', cursive;
+  text-shadow: 2px 2px #ff6d53;
+}
+
+@media screen and (min-width: 1024px) {
+  .title {
+    width: 30%;
+  }
 }
 
 .title span {
-  color: #f0f0f0;
+  color: #e1e1e1;
   font-weight: bold;
-  font-size: 1em;
   margin: 5%;
-  display: none;
 }
 
 @media screen and (min-width: 426px) {
@@ -170,6 +188,7 @@ menu {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 100%;
 }
 
 .links button {
@@ -177,7 +196,7 @@ menu {
   outline: none;
   cursor: pointer;
   background: none;
-  color: #f0f0f0;
+  color: #e1e1e1;
   font-size: .7em;
   position: relative;
   border-radius: 5px;
@@ -194,7 +213,7 @@ menu {
 .links button::after {
   content: "";
   display: block;
-  background: rgba(255, 99, 71, 0.5);
+  background: rgba(252, 148, 129, 0.5);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -234,16 +253,26 @@ section {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  color: #f0f0f0;
+  color: #e1e1e1;
+  background: #323232;
+  border-radius: 5px;
 }
 
 section h2 {
-  font-size: 1.3em;
+  font-family: 'Righteous', cursive;
+  text-shadow: 2px 2px #ff6d53;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
   section h2 {
-    font-size: 2em;
+    font-size: 2.25em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section h2 {
+    font-size: 2.75em;
   }
 }
 
@@ -268,6 +297,8 @@ img {
   border-radius: 5px;
   width: 100%;
   margin: 10px 0;
+  -webkit-box-shadow: 3px 3px #fc9481;
+          box-shadow: 3px 3px #fc9481;
 }
 
 @media screen and (min-width: 480px) {
@@ -293,7 +324,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   background: #323232;
-  color: #f0f0f0;
+  color: #e1e1e1;
   padding: 20px;
 }
 
@@ -315,6 +346,7 @@ footer > p {
 .media i {
   color: whitesmoke;
   margin: 0 5px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 480px) {

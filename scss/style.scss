@@ -27,17 +27,20 @@ header {
 }
 
 h1 {
+    @include titles;
     margin: 0;
     padding: 10px;
     text-align: center;
     color: $dark1;
     background: rgba($color: #ffffff, $alpha: 0.5);
-    border-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 
-    @media screen and (min-width: 769px) {
-        font-size: 3em;
+    @media screen and (min-width: 768px) {
+        font-size: 2.75em;
     }
     @media screen  and ( min-width:1024px ) {
+        font-size: 3em;
         margin-left: 50px;
     }
 }
@@ -51,18 +54,27 @@ menu {
     width: 100%;
     position: sticky;
     top: 0;
+
+    @media screen and (min-width: 1024px) {
+        display: flex;
+    }
 }
 
 .title {
     margin-bottom: 5px;
     text-align: right;
+    @include titles;
+
+
+    @media screen and (min-width: 1024px) {
+        width: 30%;
+    }
 
     span {
         color: $light;
         font-weight: bold;
-        font-size: 1em;
         margin: 5%;
-        display: none;
+        // display: none;
 
         @media screen and (min-width: 426px) {
             font-size: 1.2em;
@@ -78,7 +90,8 @@ menu {
 .links {
     display: flex;
     justify-content: space-around;
-
+    width: 100%;
+    
     button {
         @include button;
         background: none; 
@@ -99,7 +112,7 @@ menu {
     button::after {
         content: "";
         display: block;
-        background: rgba(255, 99, 71, 0.5);
+        background: rgba($shadow, 0.5);
         width: 100%;
         height: 100%;
         position: absolute;
@@ -128,12 +141,18 @@ main {
 section {
     @include section-txt;
     color: $light;
+    background: $dark2;
+    border-radius: 5px;
 
     h2 {
-        font-size: 1.3em;
+        @include titles;
+        text-align: center;
         
         @media screen and (min-width: 768px) {
-            font-size: 2em;
+            font-size: 2.25em;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 2.75em;
         }
     }
 
@@ -155,6 +174,7 @@ img {
     border-radius: 5px;
     width: 100%;
     margin: 10px 0;    
+    box-shadow: 3px 3px $shadow;
 }
 
 @media screen and (min-width: 480px) {
@@ -199,6 +219,7 @@ footer > p {
     i {
         color: rgb(245, 245, 245);
         margin: 0 5px;
+        cursor: pointer;
     }
 
 

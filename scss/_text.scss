@@ -1,6 +1,13 @@
+@import "colors";
+
 @mixin section-txt {
     margin: 0;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
+}
+
+@mixin titles {
+    font-family: 'Righteous', cursive;
+    text-shadow: 2px 2px $shadow2;
 }
