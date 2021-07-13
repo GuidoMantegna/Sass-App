@@ -1,7 +1,7 @@
 # Sass App
 🌎[DeathRoad.com](https://sass-app.vercel.app/) <br>
 
-📣 A responsive app created using SCSS:
+📣 A responsive app created using SCSS: <br>
 🛠 Variables <br>
 🗃 Nesting <br>
 🧪 Mixins <br>
